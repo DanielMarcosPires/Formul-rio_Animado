@@ -1,0 +1,59 @@
+.container__section{
+    background: #021c4243;
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    position: absolute;
+    padding: 2em;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    min-width: 295px;
+    z-index: 2;
+}
+
+.container__form div{
+    position: relative;
+    margin: 1em 0;
+    display: flex;
+}
+.form__title{
+    color: var(--azul);
+    text-shadow: 0 0 4px var(--azul);
+    letter-spacing: 2px;
+}
+label{
+    color: var(--azul);
+    text-transform: uppercase;
+    position: absolute;
+    transition: 0.2s;
+}
+input[type="text"]{
+    background: transparent;
+    border: none;
+    border-radius: 0 0 5px 0;
+    border-bottom: solid 1px var(--azulTransparente);
+    transition: 0.2s;
+    outline: none;
+}
+input[type="text"]:focus{
+    border-bottom:solid 1px var(--azul) ;
+    color: var(--azul);
+}
+input[type="text"]:focus ~ label{
+    opacity: 0.2;
+    color: var(--azul);
+}
+input[type="text"]:focus ~ label:focus{
+    color: var(--azul);
+}
+input[type="submit"]{
+    background: var(--azul);
+    padding: 8px 4px;
+    border-radius: 8px;
+    border: none;
+    width: 200px;
+}
+input[type="submit"]:active{
+    opacity: 0.2;
+}

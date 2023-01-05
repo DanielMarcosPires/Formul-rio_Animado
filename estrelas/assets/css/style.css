@@ -1,0 +1,48 @@
+@import url('./style/container/style.css');
+@keyframes anim{
+    0%{
+        transform: translateY(100vh) scale(0);
+    }100%{
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
+:root{
+    /* Você pode mudar a cor das estrelas por aqui! */
+    --amarelo:#e5ff00;
+    --amareloTransparente:#e5ff0044;
+    --azul:#2dc3ff;
+    --azulTransparente:#2dc3ff44;
+}
+
+body{
+    background: #0c192c;
+    min-height: 100vh;
+    overflow: hidden;
+}
+.container{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+.bolhas{
+    position: absolute;
+    display: flex;
+}
+.bolhas span {
+    width:30px;
+    height: 30px;
+    background: #e5ff00;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0px 10px #e5ff0044,
+    0 0 50px #e5ff00,
+    0 0 100px #e5ff00;
+    animation: anim calc(50s /var(--i)) linear infinite;
+}
+.bolhas span:nth-last-of-type(even){
+    background:#2dc3ff;
+    box-shadow: 0 0 0px 10px #2dc3ff44,
+    0 0 50px #2dc3ff,
+    0 0 100px #2dc3ff;
+}
