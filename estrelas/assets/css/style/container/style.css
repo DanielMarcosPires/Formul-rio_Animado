@@ -7,7 +7,6 @@
     top: 15%;
     left: 50%;
     transform: translateX(-50%);
-    width: 50%;
     min-width: 295px;
     z-index: 2;
 }
@@ -35,6 +34,7 @@ input[type="text"]{
     border-bottom: solid 1px var(--azulTransparente);
     transition: 0.2s;
     outline: none;
+    width: 100%;
 }
 input[type="text"]:focus{
     border-bottom:solid 1px var(--azul) ;
@@ -52,8 +52,11 @@ input[type="submit"]{
     padding: 8px 4px;
     border-radius: 8px;
     border: none;
-    width: 200px;
+    width: 100%;
 }
 input[type="submit"]:active{
     opacity: 0.2;
+}
+form a{
+    color: var(--azul);
 }
